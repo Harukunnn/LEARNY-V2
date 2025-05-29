@@ -2,6 +2,12 @@
 
 from importlib import import_module
 
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from importlib import import_module
+
+
 MODULES = [
     "ankipp",
     "ankipp.anki_core",

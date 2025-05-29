@@ -1,5 +1,3 @@
-"""Data models for Anki++."""
-
 from .deck import Deck
 from .note import Note
 from .card import Card
@@ -14,4 +12,5 @@ __all__ = [
     "CardType",
     "Rating",
 ]
+
 

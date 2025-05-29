@@ -2,14 +2,17 @@
 
 from __future__ import annotations
 
+
 from datetime import datetime
 from typing import Optional
 
 from ..models import Card, CardType, Note
 
 
+
 class CardService:
     """Business logic related to cards."""
+
 
     def create_card(
         self, note: Note, card_type: CardType, initial_due: Optional[datetime] = None
@@ -24,3 +27,6 @@ class CardService:
         note.cards.append(card)
         return card
 
+
+    # TODO: implement methods for card management
+    pass

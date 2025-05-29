@@ -1,3 +1,4 @@
+
 """Card scheduling using the FSRS 2024 algorithm."""
 
 from __future__ import annotations
@@ -36,4 +37,24 @@ def schedule(card: Card, rating: Rating, now: datetime) -> None:
     card.ease = ease
     card.due_date = now + timedelta(days=interval)
     card.last_review = now
+
+
+"""Scheduling logic for card reviews."""
+
+from __future__ import annotations
+
+from datetime import datetime
+
+from .models.card import Card
+
+
+class Scheduler:
+    """Determine scheduling of card reviews."""
+
+    def get_next_review(self, card: Card) -> datetime:
+        """Return the next review time for a given card.
+
+        This is a stub implementation to be completed.
+        """
+        raise NotImplementedError
 

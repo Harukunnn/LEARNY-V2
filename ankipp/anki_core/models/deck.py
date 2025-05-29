@@ -9,7 +9,9 @@ from sqlmodel import SQLModel, Field, Relationship
 
 if TYPE_CHECKING:
     from .note import Note
+from typing import Optional
 
+from sqlmodel import SQLModel, Field
 
 class Deck(SQLModel, table=True):
     """Representation of a deck of cards."""
@@ -21,3 +23,6 @@ class Deck(SQLModel, table=True):
 
     notes: List["Note"] = Relationship(back_populates="deck", sa_relationship_kwargs={"cascade": "all, delete-orphan"})
 
+    name: str
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: datetime = Field(default_factory=datetime.utcnow)

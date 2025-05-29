@@ -18,3 +18,14 @@ class Settings:
     )
     request_retention: float = 0.9
 
+
+from dataclasses import dataclass
+
+
+@dataclass
+class Config:
+    """Application configuration."""
+
+    # TODO: define configuration fields
+    debug: bool = False
+
