@@ -1,0 +1,21 @@
+[project]
+name = "ankipp"
+version = "0.1.0"
+description = "Flash-cards local app (Anki++)"
+requires-python = ">=3.11"
+dependencies = [
+  "pyqt6 >= 6.6",
+  "sqlmodel >= 0.0.12",
+  "pydantic >= 2.7",
+  "rich >= 13.7",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["ankipp"]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+line-length = 100
