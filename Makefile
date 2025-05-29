@@ -16,5 +16,11 @@ test:
 run:
 . .venv/bin/activate && python -m ankipp
 
+
+export:
+	. .venv/bin/activate && ankipp export $(deck) --format $(fmt) --out $(out)
+import:
+	. .venv/bin/activate && ankipp import $(file)
+
 docs:
 @echo "(placeholder) Génération de la doc Sphinx"

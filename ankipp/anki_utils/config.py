@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+
 from dataclasses import dataclass, field
 from typing import List
 
@@ -17,6 +18,7 @@ class Settings:
         ]
     )
     request_retention: float = 0.9
+
 
 
 from dataclasses import dataclass

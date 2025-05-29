@@ -1,4 +1,5 @@
 
+
 """Repository layer wrapping SQLModel sessions."""
 
 from __future__ import annotations
@@ -8,11 +9,16 @@ from typing import Generic, Iterable, Optional, TypeVar, Type
 
 from sqlmodel import Session, select
 
+
 """Generic repository interface."""
 
 from __future__ import annotations
 
 from typing import Generic, TypeVar
+
+
+T = TypeVar("T")
+
 
 
 T = TypeVar("T")
@@ -78,9 +84,9 @@ class ReviewLogRepository(BaseRepository):
     pass
 
 
+
 class Repository(Generic[T]):
     """Abstract repository for CRUD operations."""
 
     # TODO: define CRUD methods
     pass
-

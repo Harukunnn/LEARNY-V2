@@ -1,4 +1,6 @@
 
+
+
 """Card scheduling using the FSRS 2024 algorithm."""
 
 from __future__ import annotations
@@ -37,6 +39,7 @@ def schedule(card: Card, rating: Rating, now: datetime) -> None:
     card.ease = ease
     card.due_date = now + timedelta(days=interval)
     card.last_review = now
+
 
 
 """Scheduling logic for card reviews."""

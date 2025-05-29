@@ -2,10 +2,13 @@
 
 from importlib import import_module
 
+
+
 import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from importlib import import_module
+
 
 
 MODULES = [
@@ -18,6 +21,11 @@ MODULES = [
     "ankipp.anki_core.scheduler",
     "ankipp.anki_core.services.card_service",
     "ankipp.anki_core.services.deck_service",
+    "ankipp.anki_core.storage.repository",
+    "ankipp.anki_core.io.exporter",
+    "ankipp.anki_core.io.importer",
+    "ankipp.anki_core.undo",
+    "ankipp.anki_ui.views.main_window",
     "ankipp.anki_core.services.review_service",
     "ankipp.anki_core.storage.repository",
     "ankipp.anki_ui",
