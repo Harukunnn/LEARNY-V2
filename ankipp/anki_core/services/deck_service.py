@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+
 from datetime import datetime
 from typing import List
 
@@ -13,6 +14,7 @@ from ..storage.in_memory import db
 
 class DeckService:
     """Business logic related to decks."""
+
 
     @staticmethod
     def create(name: str) -> Deck:
@@ -43,3 +45,7 @@ class DeckService:
     def add_card(deck_id: int, front: str, back: str) -> Card:
         card = CardService.create(deck_id, front, back)
         return card
+
+    # TODO: implement methods for deck management
+    pass
+

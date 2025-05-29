@@ -1,3 +1,4 @@
+
 """CLI entry point for Anki++ using Typer."""
 
 from __future__ import annotations
@@ -29,6 +30,17 @@ def import_(file: str, fmt: str = "json") -> None:
 def main() -> None:
     """Run CLI."""
     typer.run(app)
+
+"""CLI entry point for Anki++."""
+
+from __future__ import annotations
+
+
+def main() -> None:
+    """Run the command-line interface."""
+    # TODO: implement CLI commands
+    pass
+
 
 
 if __name__ == "__main__":

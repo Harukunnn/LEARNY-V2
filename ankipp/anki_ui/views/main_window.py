@@ -1,10 +1,15 @@
+
 """Main window view with undo/redo and import/export placeholders."""
+
+"""Main window view."""
+
 
 from __future__ import annotations
 
 
 class MainWindow:
     """Placeholder for the main application window."""
+
 
     def __init__(self) -> None:
         self.last_action: str | None = None
@@ -24,3 +29,7 @@ class MainWindow:
     def on_export(self) -> None:
         """Handle export."""
         self.last_action = "export"
+
+    # TODO: implement PyQt6 window
+    pass
+

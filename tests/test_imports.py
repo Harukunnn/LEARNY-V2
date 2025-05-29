@@ -2,6 +2,15 @@
 
 from importlib import import_module
 
+
+
+import os, sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from importlib import import_module
+
+
+
 MODULES = [
     "ankipp",
     "ankipp.anki_core",
@@ -17,6 +26,14 @@ MODULES = [
     "ankipp.anki_core.io.importer",
     "ankipp.anki_core.undo",
     "ankipp.anki_ui.views.main_window",
+    "ankipp.anki_core.services.review_service",
+    "ankipp.anki_core.storage.repository",
+    "ankipp.anki_ui",
+    "ankipp.anki_ui.views.main_window",
+    "ankipp.anki_ui.views.review_view",
+    "ankipp.anki_ui.controllers.deck_controller",
+    "ankipp.anki_ui.controllers.review_controller",
+    "ankipp.anki_plugins.loader",
     "ankipp.anki_cli.cli",
     "ankipp.anki_utils.config",
     "ankipp.anki_utils.logger",
@@ -27,3 +44,4 @@ def test_imports() -> None:
     """Import each module to ensure availability."""
     for module_name in MODULES:
         import_module(module_name)
+

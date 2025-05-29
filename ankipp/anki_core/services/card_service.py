@@ -8,8 +8,16 @@ from ..models.card import Card
 from ..storage.in_memory import db
 
 
+from datetime import datetime
+from typing import Optional
+
+from ..models import Card, CardType, Note
+
+
+
 class CardService:
     """Business logic related to cards."""
+
 
     @staticmethod
     def create(deck_id: int, front: str, back: str) -> Card:
@@ -38,3 +46,22 @@ class CardService:
     @staticmethod
     def get(card_id: int) -> Card:
         return db.cards[card_id]
+
+
+    def create_card(
+        self, note: Note, card_type: CardType, initial_due: Optional[datetime] = None
+    ) -> Card:
+        """Instantiate a card for a given note."""
+        card = Card(
+            note_id=note.id,
+            note=note,
+            card_type=card_type,
+            due_date=initial_due or datetime.utcnow(),
+        )
+        note.cards.append(card)
+        return card
+
+
+    # TODO: implement methods for card management
+    pass
+
