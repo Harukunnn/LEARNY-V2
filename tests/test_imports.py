@@ -1,5 +1,7 @@
 """Smoke tests for module imports."""
 
+from importlib import import_module
+
 import os, sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -16,6 +18,7 @@ MODULES = [
     "ankipp.anki_core.scheduler",
     "ankipp.anki_core.services.card_service",
     "ankipp.anki_core.services.deck_service",
+    "ankipp.anki_core.services.review_service",
     "ankipp.anki_core.storage.repository",
     "ankipp.anki_ui",
     "ankipp.anki_ui.views.main_window",
@@ -33,3 +36,4 @@ def test_imports() -> None:
     """Import each module to ensure availability."""
     for module_name in MODULES:
         import_module(module_name)
+

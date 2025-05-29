@@ -19,3 +19,11 @@ strict = true
 
 [tool.ruff]
 line-length = 100
+
+
+[tool.coverage.run]
+source = ["ankipp"]
+
+[tool.coverage.report]
+fail_under = 92
+
